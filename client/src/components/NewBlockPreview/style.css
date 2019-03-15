@@ -1,0 +1,47 @@
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 100%;
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+  .new-card-title {
+      background-color: lightgray;
+      color: black;
+      text-align: center;
+      padding: 15px;
+      text-decoration: none;
+  }
+  .preview-text {
+      color: rgb(158, 157, 157);
+      padding: 10px;
+      margin-bottom: 30px;
+      text-decoration: none;
+  }
+
+  .word-count {
+      display: inline;
+      float: left;
+  }
+
+  .contributor-count {
+      display: inline;
+     float: right;
+  }
+  
+  .container {
+    padding: 2px 16px;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .first-add-block {
+    color: black;
+  }
+
+  .first-add-block:hover {
+    color: red;
+  }

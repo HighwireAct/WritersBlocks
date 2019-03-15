@@ -1,0 +1,20 @@
+nav.navbar.navbar-default {
+    margin-bottom: 0;
+  }
+
+.navbar-nav {
+  flex-direction: row;
+}
+
+.nav-link {
+  margin-right: 25px;
+}
+
+.login-link {
+  margin-right: 50px;
+  float: right;
+}
+
+.login {
+  color: black;
+}

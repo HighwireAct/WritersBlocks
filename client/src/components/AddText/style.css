@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text:400,400i');
+
+body {
+  line-height: 1.5;
+  
+}
+
+.add-mode-div {
+  color: lightgrey;
+  max-width: 75%;
+  max-height: 400px;
+  padding: 15px;
+  font-style: italic;
+  margin: 0 auto;
+  margin-top: 15px;
+  border-style: none solid none solid;
+  font-family: "Crimson Text";
+}
+
+textarea {
+  display: block;
+  border: none;
+  outline: none;
+  font-size: 18pt;
+  line-height: 1.5;
+  font-family: "Crimson Text";
+  resize: none;
+  max-width: 100%;
+  height: 200px;
+  caret-color: lightgrey;
+}
+
+textarea::selection {
+/*   color: white; */
+  background: lightgrey;
+}
+
+textarea::placeholder {
+  color: lightgrey;
+}
+
+.container-fluid {
+  margin-top: 15px;
+}

@@ -1,0 +1,21 @@
+{
+  "name": "writersblocks",
+  "version": "1.0.0",
+  "description": "A collaborative writing app for writers at an impasse",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client-install": "npm install --prefix client",
+    "dev": "concurrently \"npm run server\" \"cd client && npm start\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "concurrently": "^4.1.0",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.19"
+  }
+}
