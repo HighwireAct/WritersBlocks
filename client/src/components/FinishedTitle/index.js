@@ -7,7 +7,7 @@ class FinishedTitle extends Component {
     render() {
         return (
             <div>
-            <h1 className="finished-title">{this.props.finishedTitle}</h1>
+            <h1 className="finished-title"><strong><i>{this.props.finishedTitle}</i></strong></h1>
             </div>
         )
     }
