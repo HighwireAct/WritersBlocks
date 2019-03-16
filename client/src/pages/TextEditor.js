@@ -30,7 +30,7 @@ class TextEditor extends Component {
   handleFormSubmit = event => {
     event.preventDefault();
     const blockData = {
-      text: this.state.text,
+      text: this.state.text.trim(),
       pieceId: this.state.pieceId
     }
     API.createBlock(blockData)

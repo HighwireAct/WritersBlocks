@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "../components/Grid";
 import { Input, TextArea, FormBtn } from "../components/Form";
+import { Redirect } from "react-router-dom";
 import API from "../utils/API";
 
 class NewTextEditor extends Component {
   state = {
     title: "",
-    text: ""
+    text: "",
+    pieceSumbmitted: false
   };
 
   handleInputChange = event => {
@@ -19,7 +21,7 @@ class NewTextEditor extends Component {
   handleFormSubmit = event => {
     event.preventDefault();
     const pieceData = {
-      title: this.state.title,
+      title: this.state.title.trim(),
       blocks: [],
       authorCount: 0
     };
@@ -27,18 +29,26 @@ class NewTextEditor extends Component {
     API.createPiece(pieceData)
       .then(res => {
         const blockData = {
-          text: this.state.text,
+          text: this.state.text.trim(),
           pieceId: res.data._id
         };
         API.createBlock(blockData)
-          .then(res => console.log(res))
+          .then(res => {
+            const lastState = this.state;
+            console.log(res);
+            this.setState({ ...lastState, pieceSubmitted: true })
+          })
           .catch(err => console.error(err));
       })
       .catch(err => console.error(err));
   };
 
   render() {
-    return (
+    return (this.state.pieceSubmitted)
+    ?
+    (<Redirect to="/write"/>)
+    :
+    (
       <>
         <Container fluid>
           <Row>
