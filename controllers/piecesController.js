@@ -4,6 +4,7 @@ module.exports = {
   findAllUnfinished: (req, res) => {
     db.Piece
       .find({ authorCount: { $lt: 5 } })
+      .sort({ updatedAt: -1 })
       .populate('blocks')
       .then(data => res.json(data))
       .catch(err => res.status(402).json(err));
@@ -11,6 +12,7 @@ module.exports = {
   findAllFinished: (req, res) => {
     db.Piece
       .find({ authorCount: 5 })
+      .sort({ updatedAt: -1 })
       .populate('blocks')
       .then(data => res.json(data))
       .catch(err => res.status(402).json(err));

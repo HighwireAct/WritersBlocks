@@ -27,17 +27,20 @@ render() {
             <Col size="md-4">
               <NewBlockPreview newblocklink={"/write/new"} />
             </Col>
-            {/* {this.state.pieces.map(piece => (
-            <Col size="md-4">
+            {this.state.pieces.map(piece => (
+            <Col 
+              key={piece._id}
+              size="md-4"
+            >
             <WriteCard
-            id={piece._id}
-            key={piece._id}
-            title={piece.title}
-            excerpt={piece.blocks[piece.blocks.length-1].text}
-            authorCount={piece.authorCount}
-          />
+              id={piece._id}
+              key={piece._id}
+              title={piece.title}
+              excerpt={piece.blocks[piece.blocks.length-1].text}
+              authorCount={piece.authorCount}
+            />
             </Col>
-            ))} */}
+            ))}
           </Row>
         </Container>
       </>

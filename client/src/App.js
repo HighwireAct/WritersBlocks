@@ -23,7 +23,7 @@ function App() {
           <Route exact path="/write/new" component={NewTextEditor} />
           <Route exact path="/write/:id" component={TextEditor} />
           <Route exact path="/read" component={BrowseRead} />
-          <Route exact path="/read/:piece_id" component={ReadDetail} />
+          <Route exact path="/read/:id" component={ReadDetail} />
           <Route exact path="/users/login" component={Login} />
           <Route exact path="/users/register" component={Register} />
           <Route component={NoMatch} />
