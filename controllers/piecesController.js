@@ -17,7 +17,7 @@ module.exports = {
   },
   findPieceById: (req, res) => {
     db.Piece
-      .findById(req.body.pieceId)
+      .findById(req.params.id)
       .populate('blocks')
       .then(data => res.json(data))
       .catch(err => res.status(402).json(err));
