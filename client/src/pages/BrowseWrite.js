@@ -27,7 +27,7 @@ render() {
             <Col size="md-4">
               <NewBlockPreview newblocklink={"/write/new"} />
             </Col>
-            {this.state.pieces.map(piece => (
+            {/* {this.state.pieces.map(piece => (
             <Col size="md-4">
             <WriteCard
             id={piece._id}
@@ -37,7 +37,7 @@ render() {
             authorCount={piece.authorCount}
           />
             </Col>
-            ))}
+            ))} */}
           </Row>
         </Container>
       </>
